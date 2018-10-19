@@ -11,7 +11,7 @@ designer Marta made a prototype for us. Here is how it looks:
 
 ![img](./images/server-ui.png)
 
-Marta also made the [Invision](https://www.invisionapp.com/) project for us, so we can freely check out the styles without any guess.
+Marta also made the [Invision](https://www.invisionapp.com/) project for us, so we can freely check out the styles.
 The credentials are:
 ```
 Email: acaisoft@tryzoe.com
@@ -25,11 +25,11 @@ Password: acaisoft248
     2. Reboot
  3. When the server is in a `REBOOTING` status you should be pinging the
     API (e.g. every 1s) until the status changes.
- 4. Allow a user to locally search for a server.
+ 4. Allow user to locally search for server.
 
 ### Tips
  - We like small components.
- - Pay attention to a code quality, conventions, formatting, etc.
+ - Pay attention to code quality, conventions, formatting, etc.
  - Tests are very welcomed.
  - You can use any libraries.
 
@@ -56,7 +56,7 @@ npm start
 ## API
 
 To remotely administer the servers we have a REST API located in `./src` directory.
-The API provides an interface listed in a table below:
+The API provides an interface listed in the table below:
 
 | Method | Endpoint | Response | Description |
 |---|---|---|---|
