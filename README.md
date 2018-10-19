@@ -5,6 +5,60 @@ In this task you will have to create simple UI components
 that will allow a user to remotely manage many servers
 located all around the world.
 
+## UI
+
+Marcin, a hardworking DevOps, would like to see the statuses of all the servers
+Acaisoft currently maintains. He would like to manually turn them on or off and
+sometimes reboot if neccessary.
+
+Your task is to provide such a functionality. Fortunately, our fantastic
+designer Marta made a prototype for us. Here is how it looks:
+
+![img](./images/server-ui.png)
+
+Marta also made the [Invision](https://www.invisionapp.com/) project for us,
+so we can freely check out the styles without any guess.
+The credentials are:
+```
+Email: acaisoft@tryzoe.com
+Password: acaisoft248
+```
+
+### Tasks
+ 1. List all the servers.
+ 2. Add a dropdown on the right with 2 options:
+    1. Turn on (or Turn off) - depending on the status
+    2. Reboot
+ 3. When the server is in a `REBOOTING` status you should be pinging the
+    API (e.g. every 1s) until the status changes.
+ 4. Allow a user to locally search for a server.
+
+### Tips
+ - We like small components.
+ - Pay attention to a code quality, conventions, formatting, etc.
+ - Tests are very welcomed.
+ - You can use any libraries.
+
+### Requirements
+
+UI was created using Node.js v10.6.0. Other versions may or may not work correctly.
+
+### Installation
+
+In `./src` run:
+
+```shell
+npm ci
+```
+
+### Run
+
+In `./src` run:
+
+```shell
+npm start
+```
+
 ## API
 
 To remotely administer the servers we have a REST API located in `./src` directory.
@@ -36,7 +90,7 @@ Our API was created using Node.js v10.6.0. Other versions may or may not work co
 In `./src` run:
 
 ```shell
-npm install
+npm ci
 ```
 
 ### Run
