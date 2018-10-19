@@ -6,6 +6,13 @@ const ONLINE = 'ONLINE';
 const OFFLINE = 'OFFLINE';
 const REBOOTING = 'REBOOTING';
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.get('/servers', (req, res) => {
   res.send(servers);
 });
@@ -60,7 +67,7 @@ function findServer(req, res) {
   if (!foundServer) {
     throw res.status(404).send({errorMessage: `Server does not exist`});
   }
-  return foundServer
+  return foundServer;
 }
 
 function getRandomTime(min, max) {
