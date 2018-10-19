@@ -1,23 +1,17 @@
 # Task
 
-In Acaisoft we love working with cloud technologies.
-In this task you will have to create simple UI components
-that will allow a user to remotely manage many servers
-located all around the world.
+In Acaisoft we love working with cloud technologies. In this task you will have to create simple UI components that will allow a user to remotely manage many servers located all around the world.
 
 ## UI
 
-Marcin, a hardworking DevOps, would like to see the statuses of all the servers
-Acaisoft currently maintains. He would like to manually turn them on or off and
-sometimes reboot if neccessary.
+Marcin, a hardworking DevOps, would like to see the statuses of all the servers Acaisoft currently maintains. He would like to manually turn them on or off and sometimes reboot if neccessary.
 
 Your task is to provide such a functionality. Fortunately, our fantastic
 designer Marta made a prototype for us. Here is how it looks:
 
 ![img](./images/server-ui.png)
 
-Marta also made the [Invision](https://www.invisionapp.com/) project for us,
-so we can freely check out the styles without any guess.
+Marta also made the [Invision](https://www.invisionapp.com/) project for us, so we can freely check out the styles without any guess.
 The credentials are:
 ```
 Email: acaisoft@tryzoe.com
