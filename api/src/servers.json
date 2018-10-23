@@ -12,7 +12,7 @@
   {
     "id": 3,
     "name": "US West (N. California)",
-    "status": "ONLINE"
+    "status": "OFFLINE"
   },
   {
     "id": 4,
@@ -32,12 +32,12 @@
   {
     "id": 7,
     "name": " Asia Pacific (Seoul)",
-    "status": "ONLINE"
+    "status": "OFFLINE"
   },
   {
     "id": 8,
     "name": "Asia Pacific (Singapore)",
-    "status": "ONLINE"
+    "status": "OFFLINE"
   },
   {
     "id": 9,
