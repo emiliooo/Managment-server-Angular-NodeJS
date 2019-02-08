@@ -54,7 +54,7 @@ app.put(`/servers/:serverId/reboot`, (req, res) => {
   }
 
   foundServer.status = REBOOTING;
-  setInterval(() => {
+  setTimeout(() => {
     foundServer.status = ONLINE;
   }, getRandomTime(1000, 5000));
 
