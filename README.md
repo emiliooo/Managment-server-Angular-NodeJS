@@ -32,6 +32,7 @@ Password: acaisoft248
  - Pay attention to code quality, conventions, formatting, etc.
  - Tests are very welcomed.
  - You can use any libraries.
+ - Don't leave unneccesary code!!!
 
 ### Requirements
 
