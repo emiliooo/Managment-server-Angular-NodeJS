@@ -1,0 +1,21 @@
+.container {
+  
+  .search-bar {
+    margin-left:70px;
+
+    input[type="text"] {
+      padding-left: 8px;
+      border-radius: 32px;
+      border: 1px solid grey;
+      padding-left: 8px;
+      height: 38px;
+      width: 263px;
+      border: 2px solid #D4D7E1;
+      background-color: #F2F3F6;
+    }
+    input:focus {
+        outline: none;
+    }
+
+  }
+}

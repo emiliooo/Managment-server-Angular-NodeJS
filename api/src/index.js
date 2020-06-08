@@ -26,7 +26,7 @@ app.get('/servers/:serverId', (req, res) => {
 
 app.put('/servers/:serverId/on', (req, res) => {
   const foundServer = findServer(req, res);
-
+  console.log(foundServer)
   if (foundServer.status !== OFFLINE) {
     return res.status(400).send({errorMessage: `Server is not offline`});
   }

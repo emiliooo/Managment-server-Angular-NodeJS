@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="top-panel">
+      <app-score-elements></app-score-elements>
+      <app-search-table (valueChange)='displayValueQuery($event)'></app-search-table>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="columnName">NAME</th>
+        <th scope="col" class="columnStatus">STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let server of servers | filterSearch: userSearch">
+        <th scope="row">{{server.name}}</th>
+        <td>
+              <div class="row-server-name" [ngClass]="{'styleNameText': server.status === 'ONLINE' }">
+                <span class="server-name-icon-dot" *ngIf="server.status === 'ONLINE'"></span>
+                <span class="server-name-icon-red" *ngIf="server.status === 'OFFLINE'">&times;</span>
+                {{server.status}}
+              </div>  
+              <div class="cover">
+                <nav class="navbar navbar-default">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <div class="dropdown">
+                        <div class="dropdowndots" type="button" id="dropdownDotsMenu" data-toggle="dropdown"></div>
+                        <div [hidden]="server.status === 'REBOOTING'" class="dropdown-menu" aria-labelledby="dropdownDotsMenu">
+                          <button class="dropdown-item" type="button" *ngIf="server.status === 'OFFLINE'" (click)="changeServerState(server.id,'on')">Turn On</button>
+                          <button class="dropdown-item" type="button" *ngIf="server.status === 'ONLINE'" (click)="changeServerState(server.id,'off')">Turn Off</button>
+                          <button class="dropdown-item" type="button" *ngIf="server.status === 'ONLINE'" (click)="changeServerState(server.id,'reboot')">Reboot</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+       </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

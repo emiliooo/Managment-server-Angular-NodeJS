@@ -1,14 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule  } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { MainTableComponent } from './main-table/main-table.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ScoreElementsComponent } from './score-elements/score-elements.component';
+import { AppMainCoverComponent } from './main-app/app-main-cover.component';
+import { SearchTableComponent } from './search-table/search-table.component';
+import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainTableComponent,
+    AppMainCoverComponent,
+    ScoreElementsComponent,
+    SearchTableComponent,
+    FilterSearchPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NoopAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
