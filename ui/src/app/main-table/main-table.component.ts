@@ -52,7 +52,6 @@ export class MainTableComponent implements OnInit, OnDestroy {
             .pipe(tap(() => this.loadListsServers()))
             .pipe(takeWhile(() => alive))
             .subscribe(() => {
-              this.loadListsServers();
               this.getServersDataService.getDataServer(numberServer)
                 .pipe(takeUntil(this.destroy$))
                 .subscribe((server: Server) => {
@@ -77,8 +76,8 @@ export class MainTableComponent implements OnInit, OnDestroy {
         stateServer = 'OFFLINE';
         break;
       case State.reboot:
-          stateServer = 'REBOOTING';
-          break;
+        stateServer = 'REBOOTING';
+        break;
     }
 
     this.servers.forEach(server => {
@@ -92,12 +91,9 @@ export class MainTableComponent implements OnInit, OnDestroy {
     this.changeServerState(serverDetails[0], serverDetails[1]);
   }
 
-
   ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
   }
-
-
 
 }
