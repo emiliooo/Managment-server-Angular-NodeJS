@@ -8,6 +8,7 @@ import { ScoreElementsComponent } from './score-elements/score-elements.componen
 import { AppMainCoverComponent } from './main-app/app-main-cover.component';
 import { SearchTableComponent } from './search-table/search-table.component';
 import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
+import { MenuDropdownComponent } from './menu-dropdown/menu-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FilterSearchPipe } from './shared/pipes/filter-search.pipe';
     AppMainCoverComponent,
     ScoreElementsComponent,
     SearchTableComponent,
-    FilterSearchPipe
+    FilterSearchPipe,
+    MenuDropdownComponent
   ],
   imports: [
     BrowserModule,

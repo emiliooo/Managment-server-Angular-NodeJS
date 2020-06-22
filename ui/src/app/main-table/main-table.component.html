@@ -19,22 +19,7 @@
                 <span class="server-name-icon-red" *ngIf="server.status === 'OFFLINE'">&times;</span>
                 {{server.status}}
               </div>  
-              <div class="cover">
-                <nav class="navbar navbar-default">
-                  <div class="container">
-                    <div class="navbar-header">
-                      <div class="dropdown">
-                        <div class="dropdowndots" type="button" id="dropdownDotsMenu" data-toggle="dropdown"></div>
-                        <div [hidden]="server.status === 'REBOOTING'" class="dropdown-menu" aria-labelledby="dropdownDotsMenu">
-                          <button class="dropdown-item" type="button" *ngIf="server.status === 'OFFLINE'" (click)="changeServerState(server.id,'on')">Turn On</button>
-                          <button class="dropdown-item" type="button" *ngIf="server.status === 'ONLINE'" (click)="changeServerState(server.id,'off')">Turn Off</button>
-                          <button class="dropdown-item" type="button" *ngIf="server.status === 'ONLINE'" (click)="changeServerState(server.id,'reboot')">Reboot</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </nav>
-              </div>
+              <app-menu-dropdown [server]="server" (serverDetail)="execChangeServerState($event)"></app-menu-dropdown>
        </td>
       </tr>
     </tbody>

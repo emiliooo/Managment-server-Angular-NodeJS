@@ -1,0 +1,15 @@
+.cover {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+
+    .dropdowndots:after {
+        content: '\2807';
+        font-size: 2em;
+        color: #2e2e2e
+      }
+
+    .navbar{
+      padding: 0;
+    }
+  }

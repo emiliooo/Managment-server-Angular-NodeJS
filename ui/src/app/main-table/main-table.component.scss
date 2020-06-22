@@ -24,12 +24,6 @@ table {
   line-height: 30px;
   font-family: "Open Sans";
 
-  .dropdowndots:after {
-    content: '\2807';
-    font-size: 2em;
-    color: #2e2e2e
-  }
-
   th {
     min-width: 108px;
   }
@@ -46,16 +40,6 @@ table {
 
   .columnName {
     width: 400px;
-  }
-
-  .cover {
-    display: flex;
-    justify-content: flex-end;
-    width: 300px;
-
-    .navbar{
-      padding: 0;
-    }
   }
 
   .row-server-name {
