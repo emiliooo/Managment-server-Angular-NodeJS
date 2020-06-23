@@ -9,12 +9,12 @@ import { Server } from '../shared/models/server.interface';
 export class MenuDropdownComponent  {
 
   @Input() server: Server;
-  @Output() serverDetail = new EventEmitter<any>();
+  @Output() serverSelected = new EventEmitter<any>();
 
   constructor() { }
 
   changeServerState(serverid: number, state: number) {
-    this.serverDetail.emit([serverid, state]);
+    this.serverSelected.emit([serverid, state]);
   }
 
 }

@@ -19,7 +19,7 @@
                 <span class="server-name-icon-red" *ngIf="server.status === 'OFFLINE'">&times;</span>
                 {{server.status}}
               </div>  
-              <app-menu-dropdown [server]="server" (serverDetail)="execChangeServerState($event)"></app-menu-dropdown>
+              <app-menu-dropdown [server]="server" (serverSelected)="execChangeServerState($event)"></app-menu-dropdown>
        </td>
       </tr>
     </tbody>

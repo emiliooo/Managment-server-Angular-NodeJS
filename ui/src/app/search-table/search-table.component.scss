@@ -1,7 +1,7 @@
 .container {
-  
+
   .search-bar {
-    margin-left:70px;
+    margin-left: 70px;
 
     input[type="text"] {
       padding-left: 8px;
@@ -13,9 +13,21 @@
       border: 2px solid #D4D7E1;
       background-color: #F2F3F6;
     }
+
     input:focus {
-        outline: none;
+      outline: none;
     }
 
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .container {
+    .search-bar {
+      input[type="text"] {
+        width: 100%;
+      }
+    }
   }
 }

@@ -87,8 +87,8 @@ export class MainTableComponent implements OnInit, OnDestroy {
     });
   }
 
-  execChangeServerState(serverDetails: object) {
-    this.changeServerState(serverDetails[0], serverDetails[1]);
+  execChangeServerState(serverSelected: object) {
+    this.changeServerState(serverSelected[0], serverSelected[1]);
   }
 
   ngOnDestroy(): void {
