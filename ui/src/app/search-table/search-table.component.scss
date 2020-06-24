@@ -1,17 +1,25 @@
+@import "../shared/styles/style-variables.scss";
+@import "../shared/styles/fonts.scss";
+
 .container {
 
   .search-bar {
     margin-left: 70px;
-
+    
     input[type="text"] {
+      font-family: OpenSansRegular;
+      font-size: 14px;
       padding-left: 8px;
       border-radius: 32px;
-      border: 1px solid grey;
-      padding-left: 8px;
+      border: 1px solid $colorGrey;
+      padding-left: 41px;
       height: 38px;
       width: 263px;
-      border: 2px solid #D4D7E1;
-      background-color: #F2F3F6;
+      border: 2px solid $borderInputColor;
+      background-color: $backgroundColor;
+      background-image: url('../shared/images/search-icon.svg');
+      background-position: 12px 10px;
+      background-repeat: no-repeat;
     }
 
     input:focus {

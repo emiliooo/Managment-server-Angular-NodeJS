@@ -1,0 +1,20 @@
+@import "../shared/styles/style-variables.scss";
+@import "../shared/styles/fonts.scss";
+
+
+.container{
+    color: $textColor;
+
+    .row:first-child{
+        color: $textColor;
+        font-family: OpenSansSemiBold;
+        font-size: 21px;
+        Line-height:44px;
+        font-weight: 600;
+    }
+
+    .row:last-child{
+        font-family: OpenSansRegular;
+        font-size: 15px;
+    }
+}

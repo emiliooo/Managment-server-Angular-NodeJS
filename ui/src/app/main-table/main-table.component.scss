@@ -1,5 +1,9 @@
+@import "../shared/styles/style-variables.scss";
+@import "../shared/styles/fonts.scss";
+
+
 .container-fluid {
-  background-color: #F2F3F6;
+  background-color: $backgroundColor;
   height: 1127px;
 
   .top-panel {
@@ -14,46 +18,66 @@
 }
 
 .styleNameText{
-  color:#60f260;
+  color:$greenColor;
 }
+
 table {
+  border: 2px solid $tableBorderColor;
   max-width: 1106px;
   margin: 0 auto;
-  background-color: white;
+  background-color: $pouWhite;
   font-size: 13px;
   line-height: 30px;
-  font-family: "Open Sans";
+  font-family: OpenSansSemiBold;
 
   th {
     min-width: 108px;
+    border:0;
+    color: $textColor;
+    font-family: OpenSansSemiBold;
+    font-size: 13px;
+    
   }
 
   thead tr th{
-    color: #9CA7D3;
-    font-family: "Open Sans";
+    font-family: OpenSansSemiBold;
     font-size: 14px;
+  }
+
+  tr{
+    border-bottom: 1px solid $tableBorderColor;
   }
 
   td {
     display: flex;
+    border:0;
   }
 
   .columnName {
     width: 400px;
+    color:$columnFontColor;
+    font-size: 14px;
+  }
+
+  .columnStatus{
+    color:$columnFontColor;
+    font-size: 14px;
   }
 
   .row-server-name {
     width: 380px;
 
     .server-name-icon-red {
-      color: red;
-      margin-right: 5px;
+      color: $colorRed;
+      font-size: 30px;
+      vertical-align: sub;
+      margin:0px 1px 0px -5px;
     }
 
     .server-name-icon-dot {
       height: 8px;
       width: 8px;
-      background-color: #60f260;
+      background-color: $greenColor;
       border-radius: 50%;
       margin-right: 5px;
       display: inline-block;

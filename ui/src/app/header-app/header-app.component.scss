@@ -1,0 +1,45 @@
+@import "../shared/styles/style-variables.scss";
+
+.container-fluid {
+  .header-panel {
+    width: 100%;
+    height: 73px;
+    background-color: $headerPanelColor;
+    font-family: Montserrat;
+
+    .logo-space {
+      display: flex;
+      width: 180px;
+      height: 70px;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 20px;
+
+      .ring-blue {
+        font-size: 23px;
+        display: inline-block;
+        width: 11.4px;
+        box-sizing: content-box;
+        height: 11.4px;
+        border: 0.1em solid $ringColor;
+        position: relative;
+        border-radius: 22.6px;
+      }
+
+      p {
+        color: $pouWhite;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 16px;
+        letter-spacing: 1px;
+      }
+
+      .line-height {
+        height: 35px;
+        width: 2px;
+        background: $lineHeight;
+      }
+    }
+  }
+}

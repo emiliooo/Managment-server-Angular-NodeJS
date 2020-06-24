@@ -4,8 +4,8 @@ import { interval, pipe, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 import { takeWhile } from 'rxjs/operators';
 import { GetServersDataService } from '../shared/services/getServers/get-servers-data.service';
-import { ObservablesService } from '../shared/services/observableService/observables-.service';
 import { State } from '../shared/enums/stateServer';
+import { ObservablesStreamService } from '../shared/services/observableService/observables.service';
 
 
 
@@ -20,18 +20,18 @@ export class MainTableComponent implements OnInit, OnDestroy {
   userSearch = ' ';
 
   constructor(private getServersDataService: GetServersDataService,
-              private observablesService: ObservablesService) { }
+              private observablesStreamService: ObservablesStreamService) { }
 
   ngOnInit() {
-    this.loadListsServers();
+    this.dataList();
   }
 
-  loadListsServers() {
+  dataList() {
     this.getServersDataService.getListsServers()
       .pipe(takeUntil(this.destroy$))
       .subscribe((listOfServers: Server[]) => {
         this.servers = listOfServers;
-        this.observablesService.emitScoreTotal(listOfServers.length);
+        this.observablesStreamService.emitPanelCounter(listOfServers.length);
       },
         error => console.error('Observer got an error: ' + error)
       );
@@ -49,7 +49,7 @@ export class MainTableComponent implements OnInit, OnDestroy {
         this.changeStatusServerLocaly(numberServer, stateServer);
         if (stateServer === 'reboot') {
           interval(1000)
-            .pipe(tap(() => this.loadListsServers()))
+            .pipe(tap(() => this.dataList()))
             .pipe(takeWhile(() => alive))
             .subscribe(() => {
               this.getServersDataService.getDataServer(numberServer)
